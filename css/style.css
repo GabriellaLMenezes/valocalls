@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&display=swap');
+
+html {
+    overflow-y: scroll;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-image: url("../img/pxfuel.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFF;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#main-header{
+    height: 60px;
+    background: #373737;
+    padding: 0 20px;
+    overflow: hidden;
+}
+#main-header h1{
+    margin: 0;
+}
+#main-header img{
+    width: 40px;
+    height: 40px;
+}
+#main-header .wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 60px;
+}
+#main-header span{
+    color: #fd4848;
+}
+
+#main-header .buttons {
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    left: 30%
+}
+
+#main-header button{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: none;
+    align-items: center;
+    color: #fd4848;
+    font-size: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+#main-header button:hover{
+    background: #292929;
+}
+
+.modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000000a1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-content{
+    width: auto;
+    height: auto;
+    min-width: 400px;
+    min-height: 100px;
+    background: #373737;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.modal .modal-content button.btn-close, #agentCards-list .agentCard button.btn-close,
+#agentCards-list .agentCard button.btn-refresh{
+    top: 0;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: #FFF;
+    font-family: cursive;
+    padding: 10px;
+    cursor: pointer;  
+}
+
+.modal .modal-content h1{
+    margin: 0;
+}
+
+#add-stock form{
+    margin: 20px 0 0 0;
+}
+
+#agentCards-list{
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#agentCards-list .agentCard{
+    background: #262626;
+    padding: 20px;
+    border-radius: 15px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#agentCards-list .agentCard h2{
+    margin-top: 0;
+}
+
+#agentCards-list .agentCard p{
+    margin: 0;
+}
+
+#agentCards-list .agentCard button.btn-close, #agentCards-list .agentCard button.btn-close{
+    visibility: hidden;
+}
+
+#agentCards-list .agentCard button.btn-refresh{
+    right: 25px;
+    top: -7px;
+    display: none;
+}
+
+#agentCards-list .wrapper {
+    display: flex;
+}
+
+/*
+    Buttons
+*/
+.roles-button {
+    width: 2px;
+    height: 2px;
+}
+
+
+/*
+    Cards
+*/
+
+.section-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    justify-content: center;
+    width: fit-content;
+}
+
+.card-name {
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    width: max-content;
+    margin: auto;
+}
+.card-icon {
+    display: flex;
+    width: 140px;
+    height: auto;
+    margin: auto;    
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+.card-icon--role {
+    width: 25px;
+    height: auto;
+  }
+
+.icon--abilities {
+    width: 35px;
+    height: auto;
+    margin-left: 2px;
+}
+.icon--abilities:last-child {
+    margin-left: 0px;
+}
+
+.abilities {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    min-width: 170px;
+}
+
+/*
+    HOOVER
+*/
+
+.fullpt {
+    max-width: 500px;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+
+.cardHoover {
+    width: 1000px;
+    height: auto;
+    position: static;
+    background: #262626;
+    padding: 20px;
+    border-radius: 15px;
+    display: none;
+}
+
+.hoover-name {
+    align-items: center;
+    text-align: center;
+    font-size: 50px;
+    width: max-content;
+    margin-left: 56%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.hoover-icon--role {
+    width: 35px;
+    height: auto;
+}
+
+.descriptionName {
+    font-size: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.description {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font: 15px;
+}
+
+.icon--abilities-hoover{
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.abilitiesDescription {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: fit-content;
+}
+
+.hoover-sides {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.btn-edit {
+    background: #262626;
+    border: none;
+    padding: 5px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.agent_icon {
+    display: flex;
+    width: 140px;
+    height: auto;
+    margin: auto;    
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.btn-save {
+    margin: 0 0 0 auto;
+    background: none;
+    border: 2px solid #00ff80;
+    color: #00ff80;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.pkm_data_modal {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+#card-details.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btnEdit {
+    width: 20px;
+}
+
+.wrapper-buttons {
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: flex-end;
+    margin-top: -18px;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>ValoCalls</title>
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="wrapper">
+                <img src="img/vecteezy_valorant-logo-png-transparent_19763186_925.png" alt="Logo">
+                <h1>Valo<span>Calls</span></h1>
+                <div class="buttons">
+                    <button onclick="listByRole('Duelist')"><img class="roles-button" src="https://media.valorant-api.com/agents/roles/dbe8757e-9e92-4ed4-b39f-9dfc589691d4/displayicon.png"></button>
+                    <button onclick="listByRole('Initiator')"><img class="roles-button" src="https://media.valorant-api.com/agents/roles/1b47567f-8f7b-444b-aae3-b0c634622d10/displayicon.png"></button>
+                    <button onclick="listByRole('Controller')"><img class="roles-button" src="https://media.valorant-api.com/agents/roles/4ee40330-ecdd-4f2f-98a8-eb1243428373/displayicon.png"></button>
+                    <button onclick="listByRole('Sentinel')"><img class="roles-button" src="https://media.valorant-api.com/agents/roles/5fc02f99-4091-4486-a531-98459a3e95e9/displayicon.png"></button>
+                    <button onclick="openModal('#add-stock')"><img src="img/Lovepik_com-400278485-plus-linear-icon.png"></button>
+                </div>
+            </div>
+        </header>
+        <div class="section-cards">
+            <div class="wrapper" id="agentCards-list">
+                <div class="agentCard">
+                        <button class="btn-close"  onclick="removeAgentCard(event)">x</button>
+                        <button class="btn-edit"  onclick="openModal('#edit-name')"><img class="btnEdit" src="/img/edit icon.png"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" id="card-details">
+
+        </div>
+
+        <div class="modal" id="add-stock">
+            <div class="modal-content">
+                <h1>Enter Agent Code</h1>
+                <button class="btn-close" onclick="closeModal('#add-agentCard')
+                ">x</button>
+                <form onsubmit="handleAddAgentCard(event)">
+                    <label for="agentCard">Code:</label>
+                    <input type="text" name="agentCard" id="agentCard" />
+                    <input type="submit" value="Go!" />
+                </form>
+            </div>
+        </div>
+        <div class="modal" id="edit-name">
+            <div class="modal-content">
+                <button class="btn-close" onclick="closeModal('#edit-name')">x</button>
+                <button class="btn-save" onclick="saveEdit()">S</button>
+                <h1 class="pkm_data_modal">
+                    <span class="agent_name">Fade</span>
+                </h1>
+                <img src="" alt="Agent Icon" class="agent_icon">
+                <form onsubmit="">
+                    <input type="search" class="agent_new_name" name="input" required>
+                </form>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>
